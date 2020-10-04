@@ -1,8 +1,11 @@
 import { PrismaClient } from '@prisma/client';
 import express from 'express';
+
+var cors = require('cors');
 const axios = require('axios');
 
 const app = express();
+app.use(cors());
 const prismaClient = new PrismaClient();
 
 app.get('/users', async (req, res) => {
