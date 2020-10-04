@@ -29,12 +29,8 @@
   },
   "dependencies": {
     "@prisma/client": "^2.8.0",
-<<<<<<< HEAD
     "axios": "^0.20.0",
-    "express": "^4.17.1"
-=======
     "express": "^4.17.1",
     "node-foursquare": "^0.4.6"
->>>>>>> 5ca03d66b767ae320abb9789df7a3ea40c31b1dc
   }
 }
