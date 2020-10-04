@@ -4,12 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node lib/server.js",
+    "build": "babel src -d lib",
+    "lint": "eslint .",
+    "dev": "nodemon --watch src --exec babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@prisma/cli": "^2.8.0"
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@prisma/cli": "^2.8.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
