@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import express from 'express';
 
-var cors = require('cors');
+const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
@@ -18,7 +18,8 @@ app.get('/products/:country', async (req, res) => {
     const response = await axios.get(
       `https://world.openfoodfacts.org/country/${req.params.country}.json`
     );
-    console.log(response.data);
+    console.log(response.data.page_size);
+
     res.status(200).json(response.data);
   } catch (error) {
     console.log(error.response.body);
@@ -26,4 +27,4 @@ app.get('/products/:country', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log(`Example app listening on port ${3000}!`));
+app.listen(8000, () => console.log(`Example app listening on port ${8000}!`));
