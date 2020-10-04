@@ -27,4 +27,12 @@ app.get('/products/:country', async (req, res) => {
   }
 });
 
+app.post('/update', async (req, res) => {
+  const product = await prismaClient.Product.update({
+    where: { id: req.body.id },
+    data: { counter: counter + 1 },
+  });
+  res.json(product);
+});
+
 app.listen(8000, () => console.log(`Example app listening on port ${8000}!`));

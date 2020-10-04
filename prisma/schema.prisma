@@ -23,5 +23,5 @@ model User {
 
 model Product {
   productid String @id @default(uuid())
-  counter default 0
+  counter   Int    @default(0)
 }
